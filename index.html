@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - DN</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About me</a></li>   
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Junior Developer</p>
+                <h1>Hey, I'm <span>Daniel</span> and <br> I develop software <h1>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <!-- About me -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                        <img src="files/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Hello! I'm Dan, a 20-year-old Informatics student at Czech University of Life Sciences in Prague, where I'm passionately delving into the exciting world of technology and software development. My journey in IT began back in 2019, and since that, I’ve been learning the power of .NET and ASP.NET to craft innovative applications. I’m passionate about technology and strive to understand it more.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>App development</span><br>.NET for console/desktop app development.</li>
+                            <li><span>Web development</span><br>ASP.NET for BE and HTML + CSS for FE.</li>
+                            <li><span>Databases</span><br>MSSQL/PostgreSQL for databases.</li>
+                            <li><span>Communication</span><br>Consulting for clients.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - 2022</span><br> IT support at Prague Congress Centre during EU presidency</li>
+                            <li><span>2021 - 2022</span><br> Junior .NET developer at KTTP s. r. o.</li>
+                            <li><span>2021 - 2021</span><br>Trainee Tester at Trask Solutions a. s.</li>
+                            <li><span>2019 - 2021</span><br>Project Manager for TrebeTruck</li>                                                      
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - current</span><br>Informatics at Czech University of Life Sciences</li>
+                            <li><span>2018 - 2022</span><br>Information Technology at Střední Průmyslová škola Na Třebešíně</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!--Contact-->
+    <div id="contact">
+        <h1 class="sub-title">Contact Me</h1>
+        <p>If you'd like to get in touch, feel free to reach out <br> through any of the following channels:</p>
+        <div class="contact-details-left">
+            <p> <i class="fa-regular fa-envelope"></i></i> daniel.narovec@gmail.com</p>
+            <p> <i class="fa-solid fa-phone"></i> +420 722 658 380</p>
+        </div>
+        
+        <div class="social-icons">
+            <a href="https://github.com/NAROCD"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dnarovec/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="files/CV.pdf" download class="btn cv-button">Download CV</a>
+        </div>
+        <div class="copyright">
+            <p>© 2023 Daniel Narovec. All rights reserved.</p>
+        </div>
+    </div>
+    
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+        function openTab(tabName){
+            for(var i = 0; i < tabContents.length; i++){
+                tabContents[i].style.display = "none";
+            }
+            for(var i = 0; i < tabLinks.length; i++){
+                tabLinks[i].classList.remove("active-link");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active-link");            
+        }
+    </script>
+</body>
+</html>
