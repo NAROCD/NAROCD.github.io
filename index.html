@@ -1,112 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website - DN</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About me</a></li>   
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div id="language-switcher">
-                    <a href="index.html">English</a> | <a href="index-cs.html">Česky</a>
-                </div> 
-            </nav>
-                       
-            <div class="header-text">
-                <p>Junior Developer</p>
-                <h1>Hey, I'm <span>Daniel</span> and <br> I develop software <h1>
-            </div>
-        </div>
-    </div>
-    <div class="divider"></div>
-    <!-- About me -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                        <img src="files/user.png">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
-                    <p>Hello! I'm Dan, a 20-year-old Informatics student at Czech University of Life Sciences in Prague, where I'm passionately delving into the exciting world of technology and software development. My journey in IT began back in 2019, and since that, I’ve been learning the power of .NET and ASP.NET to craft innovative applications. I’m passionate about technology and strive to understand it more.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio - NAROCD</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Daniel Narovec</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experince</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
-                        <p class="tab-links" onclick="openTab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills" onclick="openTab('skills')">
-                        <ul>
-                            <li><span>App development</span><br>.NET for console/desktop app development.</li>
-                            <li><span>Web development</span><br>ASP.NET for BE and HTML + CSS for FE.</li>
-                            <li><span>Databases</span><br>MSSQL/PostgreSQL for databases.</li>
-                            <li><span>Communication</span><br>Consulting for clients.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience" onclick="openTab('experience')">
-                        <ul>
-                            <li><span>2022 - 2022</span><br> IT support at Prague Congress Centre during EU presidency</li>
-                            <li><span>2021 - 2022</span><br> Junior .NET developer at KTTP s. r. o.</li>
-                            <li><span>2021 - 2021</span><br>Trainee Tester at Trask Solutions a. s.</li>
-                            <li><span>2019 - 2021</span><br>Project Manager for TrebeTruck</li>                                                      
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education" onclick="openTab('education')">
-                        <ul>
-                            <li><span>2022 - current</span><br>Informatics at Czech University of Life Sciences</li>
-                            <li><span>2018 - 2022</span><br>Information Technology at Střední Průmyslová škola Na Třebešíně</li>
-                        </ul>
-                    </div>
-                </div>
+    <nav id="hamburger-nav">
+      <div class="logo">Daniel Narovec</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experince</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/user.png" alt="hey? it's me Dan" />
+      </div>
+      <div class="section__text">
+        <p class="section__text_p1">Hello, I'm</p>
+        <h1 class="title">Daniel</h1>
+        <p class="section__text_p2">Junior BE developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/cv.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Me
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My linkedin"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/dnarovec/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My GitHub profile"
+            class="icon"
+            onclick="location.href='https://github.com/NAROCD'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text_p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-container">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="experience"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>
+                2 years <br />
+                Backend Development
+              </p>
             </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="experience" class="icon" />
+              <h3>Education</h3>
+              <span>
+                OCT 2022 - now
+                <p>Informatics at Czech University of Life Sciences</p>
+              </span>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hello! I'm Dan, a 20-year-old Informatics student at Czech
+              University of Life Sciences in Prague, where I'm passionately
+              delving into the exciting world of technology and software
+              development. My journey in IT began back in 2019, and since that,
+              I’ve been learning the power of .NET and ASP.NET to craft
+              innovative applications. I’m passionate about technology and
+              strive to understand it more.
+            </p>
+          </div>
         </div>
-    </div>
-    <div class="divider"></div>
-
-    <!--Contact-->
-    <div id="contact">
-        <h1 class="sub-title">Contact Me</h1>
-        <p>If you'd like to get in touch, please feel free to reach out through any of the following channels:</p>
-        
-        <div class="contact-details-left">
-            <p><i class="fa-regular fa-envelope"></i> <a href="mailto:daniel.narovec@gmail.com">daniel.narovec@gmail.com</a></p>
-            <p><i class="fa-solid fa-phone"></i> <a href="tel:+420722658380">+420 722 658 380</a></p>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text_p1">Explore my</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-container">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>.NET</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>NestJS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <div></div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+              <article></article>
+              <article></article>
+            </div>
+          </div>
         </div>
-        
-        <div class="social-icons">
-            <a href="https://github.com/NAROCD" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/dnarovec/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="files/CV.pdf" download class="btn cv-button">Download CV</a>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'"
+        />
+      </div>
+    </section>
+    <section id="projects">
+      <p class="section__text_p1">Browse my recent projects</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-container">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/checkmark.png"
+                alt="project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href=''"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href=''"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/checkmark.png"
+                alt="project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href=''"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href=''"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/checkmark.png"
+                alt="project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href=''"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href=''"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="copyright">
-            <p>© 2023 Daniel Narovec. All rights reserved.</p>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text_p1">Get in touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:daniel.narovec@gmail.com">daniel.narovec@gmail.com</a></p>
         </div>
-    </div>
-    
-    
-    
-    <script>
-        var tabLinks = document.getElementsByClassName("tab-links");
-        var tabContents = document.getElementsByClassName("tab-contents");
-        function openTab(tabName){
-            for(var i = 0; i < tabContents.length; i++){
-                tabContents[i].style.display = "none";
-            }
-            for(var i = 0; i < tabLinks.length; i++){
-                tabLinks[i].classList.remove("active-link");
-            }
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.classList.add("active-link");            
-        }
-    </script>
-</body>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="linkedin icon"
+            class="icon contact-icon"
+          />
+          <p><a href="location.href='https://www.linkedin.com/in/dnarovec/'">My LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experince</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Daniel Narovec. All rights reserved</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
