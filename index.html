@@ -3,11 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Daniel Narovec's portfolio showcasing his experience in backend development, projects, and contact information."
+    />
     <title>My Portfolio - NAROCD</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <div class="popup-overlay" id="popupOverlay">
+      <div class="popup">
+        <h2>Welcome to Our Work in Progress!</h2>
+        <p>
+          We're currently updating our portfolio. Thank you for your patience!
+        </p>
+        <button onclick="closePopup()">Got it!</button>
+      </div>
+    </div>
+
     <nav id="desktop-nav">
       <div class="logo">Daniel Narovec</div>
       <div>
@@ -342,7 +356,11 @@
             alt="email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:daniel.narovec@gmail.com">daniel.narovec@gmail.com</a></p>
+          <p>
+            <a href="mailto:daniel.narovec@gmail.com"
+              >daniel.narovec@gmail.com</a
+            >
+          </p>
         </div>
         <div class="contact-info-container">
           <img
