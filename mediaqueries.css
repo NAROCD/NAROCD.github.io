@@ -19,6 +19,9 @@
   #hamburger-nav {
     display: flex;
   }
+  .menu-links {
+    background-color: transparent;
+  }
   #experience,
   .experience-details-container {
     margin-top: 2rem;
@@ -85,6 +88,9 @@
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+  }
+  .menu-links {
+    background-color: transparent;
   }
   .section__pic-container {
     width: auto;
