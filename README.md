@@ -24,13 +24,15 @@ This website serves as a platform to present my professional background, recent 
 ## Installation
 
 To get a local copy up and running, follow these simple steps:
-## Clone the repository
+Clone the repository
 git clone https://github.com/NAROCD/NAROCD.github.io.git
 
 ## Navigate to the project directory
+
 cd NAROCD.github.io.git
 
 ## Running Locally
+
 This project can be run locally using the Live Server extension in Visual Studio Code.
 
 Open the project in Visual Studio Code.
@@ -40,6 +42,7 @@ Click on the "Go Live" button in the status bar at the bottom, or use the comman
 The website should now open in your default web browser, and it will automatically refresh whenever you save changes to your files.
 
 ## Contact
+
 Feel free to reach out if you have any questions, suggestions, or collaboration opportunities!
 
 Daniel Narovec
