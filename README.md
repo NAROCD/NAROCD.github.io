@@ -25,10 +25,10 @@ This website serves as a platform to present my professional background, recent 
 
 To get a local copy up and running, follow these simple steps:
 ## Clone the repository
-git clone <your-repo-link>
+git clone https://github.com/NAROCD/NAROCD.github.io.git
 
 ## Navigate to the project directory
-cd <your-repo-name>
+cd NAROCD.github.io.git
 
 ## Running Locally
 This project can be run locally using the Live Server extension in Visual Studio Code.
