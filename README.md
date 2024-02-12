@@ -18,6 +18,5 @@ Technologies Used
     HTML
     CSS
     JavaScript
-    Author
 
 Feel free to reach out if you have any questions, suggestions, or collaboration opportunities!
